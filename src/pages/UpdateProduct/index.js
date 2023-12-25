@@ -28,7 +28,7 @@ const UpdateProduct = () => {
 		try {
 			setLoad(true);
 			const { data } = await axios.get(
-				`/api/v1/product/get-product/${params.slug}`,
+				`${process.env.REACT_APP_API}/api/v1/product/get-product/${params.slug}`,
 			);
 
 			setName(data.product.name);
@@ -54,7 +54,9 @@ const UpdateProduct = () => {
 	const getAllCategory = async () => {
 		try {
 			setLoad(true);
-			const { data } = await axios.get('/api/v1/category/get-categories');
+			const { data } = await axios.get(
+				`${process.env.REACT_APP_API}/api/v1/category/get-categories`,
+			);
 			setLoad(false);
 			if (data?.success) {
 				setCategories(data?.category);
@@ -83,7 +85,7 @@ const UpdateProduct = () => {
 			image && productData.append('image', image);
 			productData.append('category', category);
 			const { data } = await axios.put(
-				`/api/v1/product/update-product/${id}`,
+				`${process.env.REACT_APP_API}/api/v1/product/update-product/${id}`,
 				productData,
 			);
 			setLoad(false);
@@ -107,7 +109,7 @@ const UpdateProduct = () => {
 			let answer = window.prompt('Are You Sure want to delete this product ? ');
 			if (!answer) return;
 			const { data } = await axios.delete(
-				`/api/v1/product/delete-product/${id}`,
+				`${process.env.REACT_APP_API}/api/v1/product/delete-product/${id}`,
 			);
 			setLoad(false);
 			toast.success('Product Deleted Successfully!');

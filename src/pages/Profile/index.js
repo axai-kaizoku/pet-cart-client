@@ -33,14 +33,17 @@ const Profile = () => {
 		e.preventDefault();
 		try {
 			setLoad(true);
-			const { data } = await axios.put('/api/v1/auth/update-profile', {
-				firstName,
-				lastName,
-				email,
-				phone,
-				address,
-				password,
-			});
+			const { data } = await axios.put(
+				`${process.env.REACT_APP_API}/api/v1/auth/update-profile`,
+				{
+					firstName,
+					lastName,
+					email,
+					phone,
+					address,
+					password,
+				},
+			);
 			setLoad(false);
 
 			if (data?.error) {

@@ -59,7 +59,9 @@ const Cart = () => {
 	const getToken = async () => {
 		try {
 			setLoad(true);
-			const { data } = await axios.get('/api/v1/product/braintree/token');
+			const { data } = await axios.get(
+				`${process.env.REACT_APP_API}/api/v1/product/braintree/token`,
+			);
 			setClientToken(data?.clientToken);
 			setLoad(false);
 		} catch (error) {

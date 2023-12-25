@@ -25,7 +25,9 @@ const CreateProduct = () => {
 	const getAllCategory = async () => {
 		try {
 			setLoad(true);
-			const { data } = await axios.get('/api/v1/category/get-categories');
+			const { data } = await axios.get(
+				`${process.env.REACT_APP_API}/api/v1/category/get-categories`,
+			);
 			setLoad(false);
 			if (data?.success) {
 				setCategories(data?.category);

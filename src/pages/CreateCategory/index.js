@@ -42,7 +42,9 @@ const CreateCategory = () => {
 	const getAllCategory = async () => {
 		try {
 			setLoad(true);
-			const { data } = await axios.get('/api/v1/category/get-categories');
+			const { data } = await axios.get(
+				`${process.env.REACT_APP_API}/api/v1/category/get-categories`,
+			);
 			setLoad(false);
 			if (data?.success) {
 				setCategories(data?.category);
@@ -64,7 +66,7 @@ const CreateCategory = () => {
 		try {
 			setLoad(true);
 			const { data } = await axios.put(
-				`/api/v1/category/update-category/${selected._id}`,
+				`${process.env.REACT_APP_API}/api/v1/category/update-category/${selected._id}`,
 				{ name: updatedName },
 			);
 			setLoad(false);
@@ -88,7 +90,7 @@ const CreateCategory = () => {
 		try {
 			setLoad(true);
 			const { data } = await axios.delete(
-				`/api/v1/category/delete-category/${pid}`,
+				`${process.env.REACT_APP_API}/api/v1/category/delete-category/${pid}`,
 			);
 			setLoad(false);
 			if (data.success) {

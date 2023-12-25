@@ -28,7 +28,7 @@ const ProductDetails = () => {
 		try {
 			setLoad(true);
 			const { data } = await axios.get(
-				`/api/v1/product/get-product/${params.slug}`,
+				`${process.env.REACT_APP_API}/api/v1/product/get-product/${params.slug}`,
 			);
 			setProduct(data?.product);
 			setLoad(false);

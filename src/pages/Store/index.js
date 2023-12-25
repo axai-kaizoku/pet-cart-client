@@ -47,7 +47,9 @@ const Store = () => {
 	const getTotal = async () => {
 		try {
 			setLoad(true);
-			const { data } = await axios.get('/api/v1/product/product-count');
+			const { data } = await axios.get(
+				`${process.env.REACT_APP_API}/api/v1/product/product-count`,
+			);
 			setLoad(false);
 
 			setTotal(data?.total);
@@ -67,7 +69,9 @@ const Store = () => {
 		try {
 			setLoading(true);
 			setLoad(true);
-			const { data } = await axios.get(`/api/v1/product/product-list/${page}`);
+			const { data } = await axios.get(
+				`${process.env.REACT_APP_API}/api/v1/product/product-list/${page}`,
+			);
 			setProducts([...products, ...data?.products]);
 			setLoading(false);
 			setLoad(false);
