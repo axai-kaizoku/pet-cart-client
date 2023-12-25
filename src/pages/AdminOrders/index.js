@@ -112,7 +112,7 @@ const AdminOrders = () => {
 												<div className="col-md-4">
 													<img
 														id="admin-orders-item-img"
-														src={`/api/v1/product/product-image/${p._id}`}
+														src={`${process.env.REACT_APP_API}/api/v1/product/product-image/${p._id}`}
 														className="card-img-top"
 														alt={p.name}
 														width="100px"

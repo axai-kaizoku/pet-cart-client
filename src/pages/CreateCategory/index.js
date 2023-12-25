@@ -21,9 +21,12 @@ const CreateCategory = () => {
 		e.preventDefault();
 		try {
 			setLoad(true);
-			const { data } = await axios.post('/api/v1/category/create-category', {
-				name,
-			});
+			const { data } = await axios.post(
+				`${process.env.REACT_APP_API}/api/v1/category/create-category`,
+				{
+					name,
+				},
+			);
 			setLoad(false);
 			if (data?.success) {
 				toast.success(`${name} category is created!`);

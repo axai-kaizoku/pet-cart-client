@@ -22,15 +22,18 @@ const Signup = () => {
 		e.preventDefault();
 		try {
 			setLoad(true);
-			const res = await axios.post('/api/v1/auth/signup', {
-				firstName,
-				lastName,
-				email,
-				phone,
-				address,
-				password,
-				answer,
-			});
+			const res = await axios.post(
+				`${process.env.REACT_APP_API}/api/v1/auth/signup`,
+				{
+					firstName,
+					lastName,
+					email,
+					phone,
+					address,
+					password,
+					answer,
+				},
+			);
 			setLoad(false);
 			if (res && res.data.success) {
 				toast.success(res.data.message);

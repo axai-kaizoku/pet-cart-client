@@ -8,7 +8,7 @@ const CartSingleItem = ({ item, handleRemove }) => {
 			<div className="product-details">
 				<div className="product-details-img">
 					<img
-						src={`/api/v1/product/product-image/${item._id}`}
+						src={`${process.env.REACT_APP_API}/api/v1/product/product-image/${item._id}`}
 						alt={item.name}
 					/>
 				</div>

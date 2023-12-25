@@ -64,7 +64,7 @@ const Orders = () => {
 																	<div className="ordered-product">
 																		<div className="ordered-product-img-name">
 																			<img
-																				src={`/api/v1/product/product-image/${p._id}`}
+																				src={`${process.env.REACT_APP_API}/api/v1/product/product-image/${p._id}`}
 																				alt={p.name}
 																			/>
 																			<Link

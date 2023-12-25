@@ -32,7 +32,7 @@ const Search = () => {
 									<div className="product-upper">
 										<div className="product-upper-img">
 											<img
-												src={`/api/v1/product/product-image/${item._id}`}
+												src={`${process.env.REACT_APP_API}/api/v1/product/product-image/${item._id}`}
 												alt="product"
 											/>
 										</div>

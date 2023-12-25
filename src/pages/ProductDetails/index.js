@@ -53,7 +53,7 @@ const ProductDetails = () => {
 							<div className="product-detail-img-div">
 								<img
 									className="product-img"
-									src={`/api/v1/product/product-image/${product._id}`}
+									src={`${process.env.REACT_APP_API}/api/v1/product/product-image/${product._id}`}
 									alt={product.name}
 								/>
 							</div>
