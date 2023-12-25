@@ -1,0 +1,285 @@
+.store {
+	width: 100%;
+}
+
+.store-container {
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.store-area {
+	display: flex;
+	width: 100%;
+	height: max-content;
+}
+
+.store-search {
+	padding: 2rem;
+}
+
+.store-search input {
+	font-size: 18px;
+	margin: 0.5rem 5rem;
+	padding: 0.5rem 1rem;
+}
+
+/* productlist css styles */
+
+.product-list {
+	width: 70%;
+}
+
+.product-list-inner {
+	display: flex;
+	flex-flow: row wrap;
+	width: 100%;
+}
+
+.product-list-inner-product {
+	margin: 1rem;
+	/* border: 1px solid black; */
+	background-color: white;
+	border-radius: 0.2rem;
+	padding: 1rem;
+	width: 14.8rem;
+}
+
+.product-upper {
+	display: flex;
+	flex-direction: column;
+}
+
+.product-upper-img {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 200px;
+	height: 200px;
+	overflow: hidden;
+	background-position: center;
+}
+
+.product-upper-img img {
+	object-fit: cover;
+}
+
+.product-upper-inner {
+	margin: 0rem;
+	padding: 0rem;
+}
+
+.product-price {
+	display: flex;
+	margin: 0.2rem;
+	padding: 1rem 0.5rem;
+}
+
+.product-price span {
+	padding: 0.5rem 1rem;
+	font-weight: 500;
+}
+
+.product-price p {
+	background-color: rgb(14, 77, 213);
+	color: white;
+	border-radius: 0.6rem;
+	font-weight: 500;
+}
+
+#product-name {
+	font-weight: 700;
+	text-decoration: none;
+	color: black;
+	margin: 4rem 1rem;
+}
+
+.product-lower {
+	margin-left: 2.8rem;
+	margin-top: 3rem;
+}
+
+.product-lower button {
+	font-weight: 600;
+	padding: 0.6rem 1.2rem;
+	border-radius: 0.2rem;
+	border: 0.5px solid black;
+}
+
+/* categories-card css styles */
+
+.categories-card {
+	width: 25%;
+	height: fit-content;
+	/* border: 1px solid black; */
+	margin: 0.5rem 4rem;
+}
+
+.categories-card-inner {
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	height: fit-content;
+}
+
+.categories-card-inner h2 {
+	padding: 0rem 3rem;
+	margin: 1rem;
+}
+
+.categories-card-inner ul {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.categories-card-inner ul li {
+	padding: 0.5rem 0px;
+	width: fit-content;
+	border-bottom: 1px solid white;
+	/* border-top: 1px solid white; */
+}
+
+#back-btn {
+	padding: 0.5rem 2.5em;
+	margin: 0.5rem 0rem;
+	text-decoration: none;
+}
+
+#link {
+	text-decoration: none;
+	color: black;
+}
+
+#link-back-btn {
+	margin: 1.8rem;
+	color: black;
+}
+
+@media screen and (max-width: 550px) {
+	.store-area {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.categories-card {
+		width: 80vw;
+		display: flex;
+		flex-direction: row;
+		/* justify-content: center; */
+	}
+
+	.categories-card-inner {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		/* justify-content: center; */
+		margin-bottom: 2rem;
+		/* height: 80vh; */
+	}
+
+	.categories-card-inner ul {
+		display: flex;
+		flex-direction: column;
+		/* justify-content: center; */
+		/* align-items: center; */
+		/* width: 90%; */
+	}
+
+	#link-back-btn {
+		margin: 0.5rem;
+	}
+
+	.product-list {
+		width: 100%;
+	}
+
+	.product-list-inner {
+		display: flex;
+		flex-direction: row;
+		width: 100vw;
+	}
+
+	/* This is product card */
+
+	.store-area {
+		display: flex;
+		flex-direction: column;
+	}
+	.product-list-inner-product {
+		margin: 0.5rem;
+		background-color: white;
+		border-radius: 0.2rem;
+		width: 11rem;
+	}
+
+	.product-upper {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.product-upper-img {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		width: fit-content;
+		height: fit-content;
+		margin-left: 0.45rem;
+	}
+
+	.product-upper-img img {
+		width: 130px;
+		height: 130px;
+		object-fit: cover;
+		background-position: center;
+	}
+
+	.product-upper-inner {
+	}
+
+	.product-name {
+		margin: 0rem;
+		padding: 0rem;
+	}
+
+	#product-name {
+		font-weight: 700;
+		text-decoration: none;
+		color: black;
+		font-size: 0.8rem;
+	}
+
+	.product-price {
+		display: flex;
+		margin: 0.2rem;
+		padding: 1rem 0.5rem;
+		font-size: 0.6rem;
+	}
+
+	.product-price span {
+		padding: 0.5rem 1rem;
+		font-weight: 500;
+		font-size: 0.9rem;
+	}
+
+	.product-price p {
+		background-color: rgb(14, 77, 213);
+		color: white;
+		border-radius: 0.6rem;
+		font-weight: 500;
+		font-size: 0.6rem;
+	}
+
+	.product-lower {
+		margin-left: 0rem;
+		margin-top: 0rem;
+		margin: 0.6rem 0rem;
+	}
+
+	.product-lower button {
+		font-weight: 600;
+		padding: 0.6rem 1.2rem;
+		border-radius: 0.2rem;
+		border: 0.5px solid black;
+		font-size: 0.6rem;
+	}
+}
