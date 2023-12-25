@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './styles.css';
 import { Link } from 'react-router-dom';
 
 const CartSingleItem = ({ item, handleRemove }) => {
-	const [num, setNum] = useState(1);
 	return (
 		<div className="cart-single-item">
 			<div className="product-details">

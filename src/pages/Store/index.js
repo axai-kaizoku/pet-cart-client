@@ -27,7 +27,9 @@ const Store = () => {
 		try {
 			setLoading(true);
 			setLoad(true);
-			const { data } = await axios.get(`/api/v1/product/product-list/${page}`);
+			const { data } = await axios.get(
+				`${process.env.REACT_APP_API}/api/v1/product/product-list/${page}`,
+			);
 			setLoading(false);
 
 			setProducts(data?.products);
@@ -40,6 +42,7 @@ const Store = () => {
 		}
 	};
 
+	console.log(products);
 	// get total count
 	const getTotal = async () => {
 		try {
@@ -95,6 +98,7 @@ const Store = () => {
 						<div className="categories-card-inner">
 							<h2>Categories</h2>
 							<div style={{ height: 'fit-content' }}>
+								{JSON.stringify(products, null, 4)}
 								<ul>
 									{categories?.map((c) => (
 										<li key={c._id}>
