@@ -102,7 +102,6 @@ const Store = () => {
 						<div className="categories-card-inner">
 							<h2>Categories</h2>
 							<div style={{ height: 'fit-content' }}>
-								{JSON.stringify(products, null, 4)}
 								<ul>
 									{categories?.map((c) => (
 										<li key={c._id}>
