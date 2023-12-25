@@ -7,7 +7,9 @@ export default function useCategory() {
 	//get cat
 	const getCategories = async () => {
 		try {
-			const { data } = await axios.get('/api/v1/category/get-categories');
+			const { data } = await axios.get(
+				`https://petcart-api.onrender.com/api/v1/category/get-categories`,
+			);
 			setCategories(data?.category);
 		} catch (error) {
 			console.log(error);
