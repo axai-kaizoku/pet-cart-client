@@ -6,7 +6,8 @@
 .cart-container {
 	display: flex;
 	flex-flow: row wrap;
-	margin: 1.8rem;
+	/* margin: 1.8rem; */
+	padding: 1.8rem;
 }
 
 .cart-left {
@@ -94,7 +95,8 @@
 	}
 
 	.cart-container {
-		margin: 2rem 0rem;
+		/* margin: 2rem 0rem; */
+		padding: 2rem 0rem;
 		display: flex;
 		flex-flow: column;
 	}
