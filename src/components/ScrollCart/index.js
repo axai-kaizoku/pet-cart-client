@@ -10,6 +10,7 @@ const ScrollCart = ({ length = 0 }) => {
 		<div className="scroll-cart">
 			<NavLink
 				to="/cart"
+				state="/cart"
 				id="link">
 				<Fab>
 					<Badge
