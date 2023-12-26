@@ -15,7 +15,7 @@ const Contact = () => {
 					<div className="contactBox">
 						<div className="form-outer-divs">
 							<div className="contact-container">
-								<h1>Contact Us</h1>
+								<h1 style={{ fontWeight: 1000 }}>CONTACT US</h1>
 								<form onSubmit={handleSubmit}>
 									<div className="mb-3">
 										<input

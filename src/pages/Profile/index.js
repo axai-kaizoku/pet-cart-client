@@ -76,7 +76,7 @@ const Profile = () => {
 					<div className="col-md-9">
 						<div className="form-outer-divs">
 							<div className="signup-container">
-								<h1>Update Profile</h1>
+								<h1 style={{ fontWeight: 1000 }}>UPDATE PROFILE</h1>
 								<form onSubmit={handleSubmit}>
 									<>
 										<div className="mb-3">

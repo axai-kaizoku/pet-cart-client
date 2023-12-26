@@ -47,7 +47,7 @@ const ForgotPassword = () => {
 			<Loading isLoading={load} />
 			<div className="form-outer-divs">
 				<div className="signup-container">
-					<h1>Reset Password</h1>
+					<h1 style={{ fontWeight: 1000 }}>RESET PASSWORD</h1>
 					<form onClick={handleSubmit}>
 						<div className="mb-3">
 							<input

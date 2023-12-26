@@ -53,7 +53,7 @@ const Signup = () => {
 			<Loading isLoading={load} />
 			<div className="form-outer-divs">
 				<div className="signup-container">
-					<h1>Signup</h1>
+					<h1 style={{ fontWeight: 1000 }}>SIGNUP</h1>
 					<form onSubmit={handleSubmit}>
 						<div className="mb-3">
 							<input

@@ -52,7 +52,7 @@ const Login = () => {
 			<Loading isLoading={load} />
 			<div className="form-outer-divs">
 				<div className="login-container">
-					<h1>Login</h1>
+					<h1 style={{ fontWeight: 1000 }}>LOGIN</h1>
 					<form onSubmit={handleSubmit}>
 						<div className="mb-3">
 							<input
